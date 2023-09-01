@@ -1,6 +1,8 @@
 import Footer from "@/src/components/sections/footer";
 import Main from "@/src/components/sections/main";
 import Navbar from "@/src/components/sections/navbar";
+import axios from "axios";
+
 export default function Home({ data }) {
   return (
     <div>
