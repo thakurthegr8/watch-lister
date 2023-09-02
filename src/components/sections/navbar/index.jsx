@@ -1,24 +1,18 @@
 import React from 'react'
 import styles from './Navbar.module.css'
+import SearchIcon from "@heroicons/react/24/solid/MagnifyingGlassIcon";
+import { LOGO_TEXT } from '@/src/constants';
 
 export default function Navbar() {
   return (
-    <div className = {styles.container}>
+    <div className="flex justify-between items-center px-3 py-4">
       <div className="logo">
-        <h1 className="text-3xl font-bold underline">Logo</h1>
+        <h1 className="text-xl font-black">{LOGO_TEXT}</h1>
       </div>
-      <div>
-        <button className={styles.nav_btn}>Home</button>
-        <button className={styles.nav_btn}>About</button>
-        <button className={styles.nav_btn}>Contact</button>
-      </div>
-      <div className={styles.search}>
-        <input type="text" />
-        <button className={styles.serach_logo }>Search</button>
-      </div>
-      <div>
-        <button className={styles.auth_btn}>Login</button>
-        <button className={styles.auth_btn}>Sign up</button>
+      <div className="flex items-center gap-2 text-sm font-semibold">
+        <button className="aspect-square"><SearchIcon className="w-4 h-4" /></button>
+        <button className="p-2 rounded">Login</button>
+        <button className="p-2 bg-white rounded-full text-black">Sign up</button>
       </div>
     </div>
   )
