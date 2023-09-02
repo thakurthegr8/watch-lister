@@ -20,10 +20,11 @@ const options = {
 
 
 export const getServerSideProps = async (context) => {
-  console.log(context.query);
-  const id = context.query.id;
+  console.log(context.query.movie_id);
+  const id = context.query.movie_id;
+  options.url = `https://api.themoviedb.org/3/discover/movie/${id}`;
   try {
-    const res = await axios('https://api.themoviedb.org/3/discover/movie/' + id ,options);
+    const res = await axios(options);
     const results = res.data.results;
     return {
       props: {
@@ -40,8 +41,8 @@ export const getServerSideProps = async (context) => {
 
 
 
-export default function Movie(movie) {
-  // console.log(movie);
+export default function Movie({movie}) {
+  console.log(movie);
   return <div>Movie detail page
     {/* <h1>{movie.title}</h1> */}
   </div>;
