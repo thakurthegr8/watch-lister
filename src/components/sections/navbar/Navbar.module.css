@@ -1,0 +1,50 @@
+/*Parent Navbar container*/
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 10px;
+}
+
+/*Search bar*/
+
+.search{
+    display: flex;
+    flex-direction: row;
+}
+.serach_logo{
+    margin-left: 8px;
+}
+.serach_logo:hover{
+    background-color: #ded7d7;
+}
+
+/*Home, Contact and About buttons*/
+
+.nav_btn{
+    margin-left: 10px;
+}
+.nav_btn:hover{
+    background-color: #ded7d7;
+    color: #000;
+}
+.nav_btn:active{
+    background-color: #342
+}
+
+/*Login and Sign Up buttons*/
+
+.auth_btn{
+    margin-left: 10px;
+}
+.auth_btn:hover{
+    background-color: #ded7d7;
+    color: #000;
+}
+.auth_btn:active{
+    background-color: #3342;
+}

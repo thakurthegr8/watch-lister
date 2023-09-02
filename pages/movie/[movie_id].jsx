@@ -1,23 +1,9 @@
-import Footer from "@/src/components/sections/footer";
-import Main from "@/src/components/sections/main";
-import Navbar from "@/src/components/sections/navbar";
+import React from "react";
 import axios from "axios";
-
-export default function Home({ data }) {
-  return (
-    <div>
-      <div>
-        <Navbar />
-      </div>
-      <Main data={data} />
-      <Footer />
-    </div>
-  );
-}
 
 const options = {
   method: "GET",
-  url: "https://api.themoviedb.org/3/discover/movie",
+  url: "https://api.themoviedb.org/3/discover/movie/",
   params: {
     include_adult: "false",
     include_video: "false",
@@ -32,13 +18,16 @@ const options = {
   },
 };
 
-export const getStaticProps = async () => {
+
+export const getServerSideProps = async (context) => {
+  console.log(context.query);
+  const id = context.query.id;
   try {
-    const res = await axios(options);
+    const res = await axios('https://api.themoviedb.org/3/discover/movie/' + id ,options);
     const results = res.data.results;
     return {
       props: {
-        data: results,
+        movie : results,
       },
     };
   } catch (error) {
@@ -48,3 +37,12 @@ export const getStaticProps = async () => {
     };
   }
 };
+
+
+
+export default function Movie(movie) {
+  // console.log(movie);
+  return <div>Movie detail page
+    {/* <h1>{movie.title}</h1> */}
+  </div>;
+}
