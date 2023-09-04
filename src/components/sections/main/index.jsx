@@ -1,5 +1,4 @@
 import React from "react";
-// import Image from "../../utils/image";
 import Image from "next/image";
 import styles from "./Main.module.css";
 import Link from "next/link";
@@ -24,6 +23,7 @@ export default function Main({ data }) {
             height={300}
             loading="lazy"
             style={{ objectFit: "cover" }}
+            alt={`${item.title} image`}
           />
           <div className="text-sm flex flex-col text-white gap-2 pt-2">
             <p className="font-medium">{item.title}</p>
