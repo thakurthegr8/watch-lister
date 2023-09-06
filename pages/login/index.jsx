@@ -7,8 +7,10 @@ export default function Login() {
     <div>
       Login Page
 
-      Don't have an account ?
+      <div>
+      <p>Don't have an account ?</p>
       <Link href="/register">Register</Link>
+      </div>
     </div>
   )
 }

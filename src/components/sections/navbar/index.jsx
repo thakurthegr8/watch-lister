@@ -16,7 +16,7 @@ export default function Navbar() {
     setShowComponent(true);
   };
   return (
-    <div className="flex justify-between items-center px-3 py-4">
+    <div className="flex justify-between items-center px-3 py-4 bg-slate-800 mb-4 ">
       <div className="logo">
         <Link className="text-xl font-black" href={"/"}>
           {LOGO_TEXT}
@@ -37,8 +37,8 @@ export default function Navbar() {
             </button>
           </Link>
         </div>
-        <Link href={'/login'}><button className="p-2 rounded">Login</button></Link>
-        <Link href={'/register'}><button className="p-2 bg-white rounded-full text-black">
+        <Link href={'/login'}><button className="p-2 rounded-md hover:bg-slate-700">Login</button></Link>
+        <Link href={'/register'}><button className="p-2 bg-white hover:bg-white/95 rounded-md text-gray-800 hover:text-black">
           Sign up
         </button></Link>
       </div>

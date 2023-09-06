@@ -23,3 +23,15 @@ export const singleMovieOptions = {
       sort_by: "popularity.desc",
     },
 }
+
+export const searchMoviesOptions = {
+  method: "GET",
+  url: "/search/movie",
+  params: {
+    include_adult: "false",
+    include_video: "false",
+    language: "en-US",
+    page: "1",
+    sort_by: "popularity.desc",
+  },
+};

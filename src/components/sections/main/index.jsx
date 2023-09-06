@@ -8,7 +8,7 @@ import { imageLoader } from "@/src/utils/image";
 export default function Main({ data }) {
   const movies = data;
   return (
-    <div className={styles.container}>
+    <div className= {`${styles.container} px-3`}>
       {movies.map((item) => (
         <Link
           key={item.id}
