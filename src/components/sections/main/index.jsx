@@ -24,6 +24,7 @@ export default function Main({ data }) {
             loading="lazy"
             style={{ objectFit: "cover" }}
             alt={`${item.title} image`}
+            unoptimized
           />
           <div className="text-sm flex flex-col text-white gap-2 pt-2">
             <p className="font-medium">{item.title}</p>

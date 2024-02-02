@@ -31,7 +31,7 @@ export const getServerSideProps = async (context) => {
 
 export default function Movie(props) {
   const { movie } = props;
-  console.log(movie);
+  // console.log(movie);
   return (
     <>
       <Navbar />
