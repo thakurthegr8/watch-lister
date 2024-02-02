@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import styles from "./Navbar.module.css";
-import SearchIcon from "@heroicons/react/24/solid/MagnifyingGlassIcon.js";
+import SearchIcon from "@heroicons/react/24/solid/MagnifyingGlassIcon";
 import { LOGO_TEXT } from "@/src/constants";
 import Link from "next/link";
 
